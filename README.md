@@ -1,4 +1,6 @@
 # CleanSweep
+![GitHub stars](https://img.shields.io/github/stars/vgudur-dev/clean-sweep?style=social) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 
 CleanSweep is a cross‑platform, privacy‑focused utility that helps you declutter your digital life by finding duplicate files and identifying storage hogs. It runs locally and works on Windows, macOS and Linux without external dependencies.
 
