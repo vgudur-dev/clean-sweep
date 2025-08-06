@@ -1,71 +1,30 @@
 # CleanSweep
 
-![CleanSweep illustration](assets/cleansweep-illustration.png)
-
-**CleanSweep** is an open‑source digital housekeeping utility that
-helps you identify duplicate files, report space hogs and regain
-control of your storage.  It runs locally, respects your privacy and
-works across Windows, macOS and Linux.  With just a few commands you
-can discover identical photos and videos, find the biggest files
-cluttering your disk and understand how different file types consume
-space.
+CleanSweep is a cross‑platform, privacy‑focused utility that helps you declutter your digital life by finding duplicate files and identifying storage hogs. It runs locally and works on Windows, macOS and Linux without external dependencies.
 
 ## Why CleanSweep?
 
-Our devices have become digital attics.  A survey of 2,000 Americans
-found that entertainment files like photos and videos occupy the
-majority of digital storage and that **three in five people hardly
-ever delete pictures from their smartphones**【433264692552072†L62-L104】.  Six in ten say
-they’ve become more reliant on technology for work and socialising
-since the pandemic【433264692552072†L62-L104】, and 56 % admit they’ve been storing even
-more photos on their devices【433264692552072†L62-L104】.  The result?  **Two‑thirds of
-Americans say their camera roll is a mess**【433264692552072†L88-L104】, and 70 % wish they
-could see all of their content in one place【433264692552072†L100-L104】.  With digital
-clutter piling up across multiple devices, it’s easy to run out of
-space, lose track of important files and pay for unnecessary cloud
-storage.
-
-CleanSweep provides a simple, transparent way to declutter your
-digital life.  Unlike proprietary cleaners that hide what they do or
-advertise aggressively, CleanSweep is fully open source.  You can
-inspect the code, trust that your data stays on your machine and
-customise the behaviour to fit your needs.
+Our digital devices are overflowing with photos, videos and downloads. A survey of 2,000 Americans found that entertainment files like photos and videos take up the majority of digital storage and that three in five people hardly ever delete pictures from their smartphones【433264692552072†L62-L104】. Over half admit they’re storing more photos than ever【433264692552072†L62-L104】, leaving many camera rolls a mess【433264692552072†L88-L104】. Seventy percent of people wish they could see all their content in one place【433264692552072†L100-L104】. CleanSweep gives you the insight and tools to reclaim space and organise your files.
 
 ## Features
 
-- **Duplicate Finder** – Recursively scan directories to identify
-  files with identical contents using SHA‑256 hashes.  CleanSweep
-  groups duplicates together and presents them in a clear report.  You
-  decide which copies to keep or remove.
-- **Storage Reporter** – Generate reports of the largest files on
-  your system and see how storage usage breaks down by file extension.
-  Find out if 4K videos, ISO images or old archives are hogging your
-  disk.
-- **Privacy‑Preserving** – All scanning happens locally.  CleanSweep
-  never uploads your files or metadata anywhere.
-- **Cross‑Platform & Lightweight** – Written in pure Python, it runs on
-  Windows, macOS and Linux without external dependencies.  There is
-  nothing to install beyond Python itself.
-- **Extensible** – The modular architecture makes it easy to add
-  actions like automated deletion (with confirmation), duplicate
-  photo detection based on perceptual hashing or integration with
-  cloud storage providers.
+- **Duplicate Finder** – Recursively scan directories and group files with identical content using secure SHA‑256 hashing. You decide which copies to keep or delete.
+- **Storage Reporter** – See the top N largest files on your system and a breakdown of storage usage by file extension.
+- **Local and Private** – All scanning is performed locally on your machine; no data leaves your computer.
+- **Pure Python & Cross‑Platform** – Runs on Windows, macOS and Linux with no external dependencies.
+- **Extensible** – Built with a modular design so you can add perceptual image hashing, automated deletion with confirmation, or cloud integration.
 
 ## Installation
 
-Clone the repository and run CleanSweep using Python 3.8 or newer:
+Clone this repository and run the CLI using Python 3.8 or newer:
 
 ```bash
-git clone https://github.com/yourusername/clean_sweep.git
-cd clean_sweep
+git clone https://github.com/vgudur-dev/clean-sweep.git
+cd clean-sweep
 python -m clean_sweep.cli --help
 ```
 
-To install as a package with a console script (future work):
-
-```bash
-pip install clean-sweep
-```
+An installable package and console script will be published soon.
 
 ## Quick Start
 
@@ -75,163 +34,26 @@ Find duplicate files in your Downloads and Pictures folders:
 python -m clean_sweep.cli find-duplicates ~/Downloads ~/Pictures
 ```
 
-Generate a storage report showing the 5 largest files and usage by
-extension:
+Generate a storage report showing the 5 largest files and usage by extension:
 
 ```bash
 python -m clean_sweep.cli report ~/Documents --top 5
 ```
 
-The output lists the largest files first, followed by a summary of
-file counts and cumulative sizes by extension.  Use this information
-to decide which files to archive or delete.
-# CleanSweep
-
-![CleanSweep illustration](assets/cleansweep-illustration.png)
-
-**CleanSweep** is an open‑source digital housekeeping utility that
-helps you identify duplicate files, report space hogs and regain
-control of your storage.  It runs locally, respects your privacy and
-works across Windows, macOS and Linux.  With just a few commands you
-can discover identical photos and videos, find the biggest files
-cluttering your disk and understand how different file types consume
-space.
-
-## Why CleanSweep?
-
-Our devices have become digital attics.  A survey of 2,000 Americans
-found that entertainment files like photos and videos occupy the
-majority of digital storage and that **three in five people hardly
-ever delete pictures from their smartphones**【433264692552072†L62-L104】.  Six in ten say
-they’ve become more reliant on technology for work and socialising
-since the pandemic【433264692552072†L62-L104】, and 56 % admit they’ve been storing even
-more photos on their devices【433264692552072†L62-L104】.  The result?  **Two‑thirds of
-Americans say their camera roll is a mess**【433264692552072†L88-L104】, and 70 % wish they
-could see all of their content in one place【433264692552072†L100-L104】.  With digital
-clutter piling up across multiple devices, it’s easy to run out of
-space, lose track of important files and pay for unnecessary cloud
-storage.
-
-CleanSweep provides a simple, transparent way to declutter your
-digital life.  Unlike proprietary cleaners that hide what they do or
-advertise aggressively, CleanSweep is fully open source.  You can
-inspect the code, trust that your data stays on your machine and
-customise the behaviour to fit your needs.
-
-## Features
-
-- **Duplicate Finder** – Recursively scan directories to identify
-  files with identical contents using SHA‑256 hashes.  CleanSweep
-  groups duplicates together and presents them in a clear report.  You
-  decide which copies to keep or remove.
-- **Storage Reporter** – Generate reports of the largest files on
-  your system and see how storage usage breaks down by file extension.
-  Find out if 4K videos, ISO images or old archives are hogging your
-  disk.
-- **Privacy‑Preserving** – All scanning happens locally.  CleanSweep
-  never uploads your files or metadata anywhere.
-- **Cross‑Platform & Lightweight** – Written in pure Python, it runs on
-  Windows, macOS and Linux without external dependencies.  There is
-  nothing to install beyond Python itself.
-- **Extensible** – The modular architecture makes it easy to add
-  actions like automated deletion (with confirmation), duplicate
-  photo detection based on perceptual hashing or integration with
-  cloud storage providers.
-
-## Installation
-
-Clone the repository and run CleanSweep using Python 3.8 or newer:
-
-```bash
-git clone https://github.com/yourusername/clean_sweep.git
-cd clean_sweep
-python -m clean_sweep.cli --help
-```
-
-To install as a package with a console script (future work):
-
-```bash
-pip install clean-sweep
-```
-
-## Quick Start
-
-Find duplicate files in your Downloads and Pictures folders:
-
-```bash
-python -m clean_sweep.cli find-duplicates ~/Downloads ~/Pictures
-```
-
-Generate a storage report showing the 5 largest files and usage by
-extension:
-
-```bash
-python -m clean_sweep.cli report ~/Documents --top 5
-```
-
-The output lists the largest files first, followed by a summary of
-file counts and cumulative sizes by extension.  Use this information
-to decide which files to archive or delete.
+The output lists the largest files first and summarises how many files and bytes are used by each extension. Use this information to decide what to archive or remove.
 
 ## How It Works
 
-CleanSweep’s duplicate finder computes a cryptographic hash for every
-file it scans.  Files that produce the same SHA‑256 digest are
-grouped together.  Reading files in small chunks minimises memory
-usage and allows hashing of large videos and disk images.  The size
-reporter traverses the same directory tree, records each file’s size
-and extension and then aggregates the data to produce both the
-“largest files” list and the “by extension” summary.
+The duplicate finder reads each file in small chunks and computes a SHA‑256 digest. Files that produce the same digest are grouped together. The size reporter traverses the same directory tree, records file sizes and extensions, then aggregates statistics.
 
-## Roadmap
+### Show Your Support
 
-1. **Interactive Duplicate Removal** – Add an optional prompt to
-   delete duplicates after review.
-2. **Perceptual Image Hashing** – Detect visually similar photos even
-   when file contents differ (e.g. different resolutions).
-3. **Cross‑Device Indexing** – Build a catalogue of files across
-   multiple devices and present them in one unified view.
-4. **Graphical UI** – Provide a desktop application for users who
-   prefer a graphical interface.
+If CleanSweep saves you time and storage space, please give this repo a ⭐ star and share it with others. Our goal is to reach 10 k stars by 2026—every star helps raise awareness and keeps this project thriving!
+
+## Contributing
+
+Contributions are welcome! If you have ideas for new features or bug fixes, please open an issue or pull request. Star this repository to show your support and help others discover CleanSweep.
 
 ## License
 
-This project is released under the [Apache 2.0 license](../LICENSE).
-
----
-
-*Digital clutter is a universal problem.  Surveys show that most
-people rarely delete old photos and videos【433264692552072†L62-L104】, leading to messy
-camera rolls and wasted storage【433264692552072†L88-L104】.  CleanSweep gives you the
-tools to see what’s consuming your space and take back control.*
-## How It Works
-
-CleanSweep’s duplicate finder computes a cryptographic hash for every
-file it scans.  Files that produce the same SHA‑256 digest are
-grouped together.  Reading files in small chunks minimises memory
-usage and allows hashing of large videos and disk images.  The size
-reporter traverses the same directory tree, records each file’s size
-and extension and then aggregates the data to produce both the
-“largest files” list and the “by extension” summary.
-
-## Roadmap
-
-1. **Interactive Duplicate Removal** – Add an optional prompt to
-   delete duplicates after review.
-2. **Perceptual Image Hashing** – Detect visually similar photos even
-   when file contents differ (e.g. different resolutions).
-3. **Cross‑Device Indexing** – Build a catalogue of files across
-   multiple devices and present them in one unified view.
-4. **Graphical UI** – Provide a desktop application for users who
-   prefer a graphical interface.
-
-## License
-
-This project is released under the [Apache 2.0 license](../LICENSE).
-
----
-
-*Digital clutter is a universal problem.  Surveys show that most
-people rarely delete old photos and videos【433264692552072†L62-L104】, leading to messy
-camera rolls and wasted storage【433264692552072†L88-L104】.  CleanSweep gives you the
-tools to see what’s consuming your space and take back control.*
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
