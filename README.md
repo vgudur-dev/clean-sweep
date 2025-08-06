@@ -48,7 +48,7 @@ The duplicate finder reads each file in small chunks and computes a SHA‑256 di
 
 ### Show Your Support
 
-If CleanSweep saves you time and storage space, please give this repo a ⭐ star and share it with others. Our goal is to reach 10 k stars by 2026—every star helps raise awareness and keeps this project thriving!
+If CleanSweep saves you time and storage space, please give this repo a ⭐ star and share it with others. Every star helps raise awareness and keeps this project thriving!
 
 ## Contributing
 
